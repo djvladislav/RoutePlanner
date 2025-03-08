@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a7d9a21-a953-4572-9b20-a9cb667c91e8" name="Changes" comment="init commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Bus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Elderly.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/General.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Passenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Taxi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Tram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/paymentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/routeCalculator.java" afterDir="false" />
+    <list default="true" id="7a7d9a21-a953-4572-9b20-a9cb667c91e8" name="Changes" comment="Add Stop, NextStop, City and JsonReader classes for city transport data">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Transfer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/DistanceCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/StopFinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/TravelDecision.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROLAB2_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PROLAB2_1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/General.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/General.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Taxi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Taxi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/routeCalculator.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,21 +32,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "djvladislav"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;djvladislav&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/djvladislav/kou_prolab2.git",
-    "accountId": "7bf37569-5395-4301-aab9-bc714d51fc95"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/djvladislav/kou_prolab2.git&quot;,
+    &quot;accountId&quot;: &quot;7bf37569-5395-4301-aab9-bc714d51fc95&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2tnfoL7eNUvvxDJ0NWNqUXODIdA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -56,23 +58,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/Berat/IdeaProjects/PROLAB2_1/src/Main.java",
-    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Berat/Downloads/gson-2.10.1.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Berat/IdeaProjects/PROLAB2_1/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Berat\IdeaProjects\PROLAB2_1\src\data" />
+      <recent name="C:\Users\Berat\IdeaProjects\PROLAB2_1\src" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -90,6 +102,14 @@
       <option name="presentableId" value="Default" />
       <updated>1740992937388</updated>
       <workItem from="1740992938435" duration="5493000" />
+      <workItem from="1741001916181" duration="305000" />
+      <workItem from="1741006130858" duration="899000" />
+      <workItem from="1741096688046" duration="24000" />
+      <workItem from="1741176711979" duration="1435000" />
+      <workItem from="1741205516209" duration="4730000" />
+      <workItem from="1741254181336" duration="4732000" />
+      <workItem from="1741341874097" duration="6727000" />
+      <workItem from="1741426183509" duration="2880000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -99,7 +119,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740993920777</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="projectsetup1">
+      <option name="closed" value="true" />
+      <created>1741002219453</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1741002219453</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add Stop, NextStop, City and JsonReader classes for city transport data">
+      <option name="closed" value="true" />
+      <created>1741346731736</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1741346731736</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,21 +154,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>1</line>
-          <properties class="Main" method="main">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="projectsetup1" />
+    <MESSAGE value="Add Stop, NextStop, City and JsonReader classes for city transport data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Stop, NextStop, City and JsonReader classes for city transport data" />
   </component>
 </project>
