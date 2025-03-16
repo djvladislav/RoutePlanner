@@ -1,7 +1,6 @@
 package data;
 
 
-import models.Transfer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +23,7 @@ private Transfer transfer;
         this.lon=lon;
         this.lastStop=lastStop;
         nextStops=new ArrayList<NextStop>();
+        this.transfer=null;
     }
 
 
@@ -61,6 +61,16 @@ private Transfer transfer;
 
     public Transfer getTransfer() {
         return transfer;
+    }
+
+
+    public NextStop getNextStopTo(Stop targetStop) {
+        for (NextStop connection : nextStops) {
+            if (connection.getStopId().equals(targetStop.getId())) {
+                return connection;
+            }
+        }
+        return null;
     }
 
 
