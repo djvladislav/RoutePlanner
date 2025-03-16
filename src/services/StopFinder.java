@@ -23,4 +23,13 @@ public class StopFinder {
         return nearestStop;
     }
 
+     public static Stop findStopById(List<Stop> stops, String stopId) {
+        for (Stop stop : stops) {
+            if (stop.getId().equals(stopId)) {
+                return stop;
+            }
+        }
+        return null;
+    }
+
 }
