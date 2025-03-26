@@ -1,16 +1,18 @@
-import data.Stop;
+/*import data.Stop;
 import data.City;
 import models.Passenger;
 import models.Student;
 import models.Taxi;
+import models.Teacher;
 import services.Dijkstra;
 import services.StopFinder;
 import services.DistanceCalculator;
 import data.jsonReader;
-
+import models.Elderly;
 import java.util.List;
 import java.util.Map;
-
+import services.PaymentMethod;
+import models.Student;
 public class Main {
     public static void main(String[] args) {
 
@@ -34,7 +36,24 @@ public class Main {
         System.out.println("\n📍 En yakın durak: " + startStop.getName() + " (" + startStop.getId() + ")");
         System.out.println("🎯 Hedef durak: " + targetStop.getName() + " (" + targetStop.getId() + ")");
 
-        Passenger passenger = new Student("Ahmet", 20);
+
+
+        Passenger passenger = new Student(
+                "Ahmet",
+                20,
+                20.0,   // nakit
+                50.0,   // kredi kartı limiti
+                30.0,   // kentkart
+                PaymentMethod.KENTKART  // ödeme yöntemi
+        );
+        System.out.println("\n👤 Yolcu Bilgileri:");
+        System.out.println("👤 Ad: " + passenger.getName());
+        System.out.println("💵 Nakit: " + passenger.getCashBalance() + " TL");
+        System.out.println("💳 Kredi Kartı: " + passenger.getCreditCardLimit() + " TL");
+        System.out.println("🪙 KentKart: " + passenger.getKentKartBalance() + " TL");
+        System.out.println("🧾 Ödeme Yöntemi: " + passenger.getPaymentMethod());
+
+
         Taxi taxi = new Taxi();
 
         double distanceToStart = DistanceCalculator.calculateDistance(userLat, userLon, startStop.getLat(), startStop.getLon());
@@ -111,5 +130,12 @@ public class Main {
         System.out.println("🔹 En Hızlı Rota: " + byTimeRoute.size() + " durak");
         System.out.println("🔹 En Ucuz Rota: " + byCostRoute.size() + " durak");
         System.out.println("🔹 En Az Aktarmalı Rota: " + byTransferRoute.size() + " durak");
+    }
+}*/
+import gui.MainFrame;
+
+public class Main {
+    public static void main(String[] args) {
+        new MainFrame(); // Swing penceresini başlatır
     }
 }
