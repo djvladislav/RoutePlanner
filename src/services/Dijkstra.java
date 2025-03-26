@@ -83,7 +83,9 @@ public class Dijkstra {
                 if (nextStop == null)
                     continue;
 
-                double newCost = costs.get(currentStop) + connection.getUcret(passenger);
+                double discountedFare = passenger.applyDiscount((float) connection.getUcret());
+                double newCost = costs.get(currentStop) + discountedFare;
+
 
                 if (newCost < costs.get(nextStop)) {
                     costs.put(nextStop, newCost);
@@ -135,7 +137,9 @@ public class Dijkstra {
                 if (nextStop == null)
                     continue;
 
-                double newCost = costs.get(currentStop) + connection.getUcret(passenger);
+                double discountedFare = passenger.applyDiscount((float) connection.getUcret());
+                double newCost = costs.get(currentStop) + discountedFare;
+
                 if (newCost < costs.get(nextStop)) {
 
                     costs.put(nextStop, newCost);
