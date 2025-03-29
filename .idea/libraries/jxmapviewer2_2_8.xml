@@ -1,7 +1,6 @@
 <component name="libraryTable">
-  <library name="gson-2.10.1">
+  <library name="jxmapviewer2-2.8">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Downloads/gson-2.10.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/jxmapviewer2-2.8.jar!/" />
     </CLASSES>
     <JAVADOC />

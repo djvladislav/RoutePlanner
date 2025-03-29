@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a7d9a21-a953-4572-9b20-a9cb667c91e8" name="Changes" comment="Add Stop, NextStop, City and JsonReader classes for city transport data">
-      <change afterPath="$PROJECT_DIR$/src/Gui/MainFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Teacher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/PaymentMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/lib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib__2_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/MapPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/gson_2_10_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_10_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PROLAB2_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PROLAB2_1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gui/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Elderly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Elderly.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/General.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/General.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Passenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/paymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/paymentService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +38,12 @@
     &quot;assignee&quot;: &quot;djvladislav&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Mervann/pro",
-    "accountId": "2f653c79-803f-4c42-861e-42758355335c"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Mervann/pro&quot;,
+    &quot;accountId&quot;: &quot;2f653c79-803f-4c42-861e-42758355335c&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -67,14 +67,14 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Downloads/gson-2.10.1.jar",
+    "last_opened_file_path": "C:/Users/mervan/IdeaProjects/kou_prolab2/lib/jxmapviewer2-2.8.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/Berat/IdeaProjects/PROLAB2_1/src/Main.java",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",

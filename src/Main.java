@@ -1,4 +1,4 @@
-/*import data.Stop;
+import data.Stop;
 import data.City;
 import models.Passenger;
 import models.Student;
@@ -65,14 +65,19 @@ public class Main {
 
         if (startByTaxi) {
             double taxiFareStart = taxi.calculateFare(distanceToStart);
+            int estimatedTimeStart = (int)(distanceToStart / 0.5); // Ortalama hız: 30 km/saat = 0.5 km/dk
+            totalTime += estimatedTimeStart;
+
             System.out.println("\n🚖 Başlangıç durağına taksi ile gidiliyor.");
             System.out.println("📏 Mesafe: " + String.format("%.2f", distanceToStart) + " km");
             System.out.println("💰 Ücret: " + String.format("%.2f", taxiFareStart) + " TL");
+
             totalFare += taxiFareStart;
             totalDistance += distanceToStart;
         } else {
             System.out.println("🚶 Yürüyerek başlangıç durağına ulaşıldı.");
         }
+
 
         Map<Stop, Stop> previous = Dijkstra.findShortestPathByCost(allStops, startStop, targetStop, passenger);
         List<Stop> route = Dijkstra.getShortestPath(previous, startStop, targetStop);
@@ -102,14 +107,19 @@ public class Main {
 
         if (endByTaxi) {
             double taxiFareEnd = taxi.calculateFare(distanceToTarget);
+            int estimatedTimeEnd = (int)(distanceToTarget / 0.5); // Ortalama hız: 30 km/saat = 0.5 km/dk
+            totalTime += estimatedTimeEnd;
+
             System.out.println("\n🚖 Hedef durağından hedefe taksi ile gidiliyor.");
             System.out.println("📏 Mesafe: " + String.format("%.2f", distanceToTarget) + " km");
             System.out.println("💰 Ücret: " + String.format("%.2f", taxiFareEnd) + " TL");
+
             totalFare += taxiFareEnd;
             totalDistance += distanceToTarget;
         } else {
             System.out.println("🚶 Yürüyerek hedef konuma ulaşıldı.");
         }
+
 
         System.out.println("\n📊 Toplam Yolculuk Özeti:");
         System.out.println("⏳ Süre: " + totalTime + " dk");
@@ -131,11 +141,11 @@ public class Main {
         System.out.println("🔹 En Ucuz Rota: " + byCostRoute.size() + " durak");
         System.out.println("🔹 En Az Aktarmalı Rota: " + byTransferRoute.size() + " durak");
     }
-}*/
-import gui.MainFrame;
+}
+/*import gui.MainFrame;
 
 public class Main {
     public static void main(String[] args) {
         new MainFrame(); // Swing penceresini başlatır
     }
-}
+}*/
