@@ -13,6 +13,10 @@ import java.util.List;
 import java.util.Map;
 import services.PaymentMethod;
 import models.Student;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -25,10 +29,13 @@ public class Main {
 
         List<Stop> allStops = city.getStops();
 
-        double userLat = 11.66;
-        double userLon = 29.85;
-        double targetLat = 40.82;
-        double targetLon = 37.00;
+        // Örneğin:
+        double userLat = 39.90;
+        double userLon = 32.85;
+        double targetLat = 40.75;
+        double targetLon = 29.90;
+
+
 
         Stop startStop = StopFinder.findNearestStop(userLat, userLon, allStops);
         Stop targetStop = StopFinder.findNearestStop(targetLat, targetLon, allStops);
@@ -38,9 +45,9 @@ public class Main {
 
 
 
-        Passenger passenger = new Student(
+        Passenger passenger = new Elderly(
                 "Ahmet",
-                20,
+                70,
                 20.0,   // nakit
                 50.0,   // kredi kartı limiti
                 30.0,   // kentkart
@@ -140,7 +147,45 @@ public class Main {
         System.out.println("🔹 En Hızlı Rota: " + byTimeRoute.size() + " durak");
         System.out.println("🔹 En Ucuz Rota: " + byCostRoute.size() + " durak");
         System.out.println("🔹 En Az Aktarmalı Rota: " + byTransferRoute.size() + " durak");
+        // 🔹 Sadece Otobüs Rota
+        List<Stop> busOnlyStops = filterStopsByType(allStops, "bus");
+        Stop busStart = StopFinder.findNearestStop(userLat, userLon, busOnlyStops);
+        Stop busTarget = StopFinder.findNearestStop(targetLat, targetLon, busOnlyStops);
+        Map<Stop, Stop> busPathMap = Dijkstra.findShortestPathByCost(busOnlyStops, busStart, busTarget, passenger);
+        List<Stop> busRoute = Dijkstra.getShortestPath(busPathMap, busStart, busTarget);
+        System.out.println("🔹 Sadece Otobüs Rota: " + busRoute.size() + " durak");
+
+// 🔹 Sadece Tramvay Rota
+        List<Stop> tramOnlyStops = filterStopsByType(allStops, "tram");
+        Stop tramStart = StopFinder.findNearestStop(userLat, userLon, tramOnlyStops);
+        Stop tramTarget = StopFinder.findNearestStop(targetLat, targetLon, tramOnlyStops);
+        Map<Stop, Stop> tramPathMap = Dijkstra.findShortestPathByCost(tramOnlyStops, tramStart, tramTarget, passenger);
+        List<Stop> tramRoute = Dijkstra.getShortestPath(tramPathMap, tramStart, tramTarget);
+        System.out.println("🔹 Sadece Tramvay Rota: " + tramRoute.size() + " durak");
+
+// 🔹 Sadece Taksi
+        double taxiOnlyDistance = DistanceCalculator.calculateDistance(userLat, userLon, targetLat, targetLon);
+        double taxiOnlyFare = taxi.calculateFare(taxiOnlyDistance);
+        int taxiOnlyTime = (int)(taxiOnlyDistance / 0.5); // 30 km/saat ~ 0.5 km/dk
+        System.out.println("🔹 Sadece Taksi:");
+        System.out.println("   📏 Mesafe: " + String.format("%.2f", taxiOnlyDistance) + " km");
+        System.out.println("   💰 Ücret: " + String.format("%.2f", taxiOnlyFare) + " TL");
+        System.out.println("   ⏳ Süre: " + taxiOnlyTime + " dk");
+
     }
+    public static List<Stop> filterStopsByType(List<Stop> allStops, String type) {
+        List<Stop> filtered = new ArrayList<>();
+        for (Stop stop : allStops) {
+            if (stop.getType().equalsIgnoreCase(type)) {
+                filtered.add(stop);
+            }
+        }
+        return filtered;
+    }
+
+
+
+
 }
 /*import gui.MainFrame;
 
