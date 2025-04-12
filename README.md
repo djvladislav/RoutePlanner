@@ -1,4 +1,4 @@
-SmartTransitPlanner is a multi-modal route planning system that evaluates bus, tram, and taxi options based on user location, preferences, and fare conditions. The system aims to provide optimal travel routes by considering time, cost, and passenger type (e.g., student, elderly). 
+RoutePlanner is a multi-modal route planning system that evaluates bus, tram, and taxi options based on user location, preferences, and fare conditions. The system aims to provide optimal travel routes by considering time, cost, and passenger type (e.g., student, elderly). 
 
 Unfortunately we did not create a GUI, it runs on console for now.
 
